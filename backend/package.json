@@ -2,20 +2,23 @@
   "name": "backend",
   "module": "index.ts",
   "private": true,
+  "type": "module",
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "nodemon": "^3.1.14"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
+    "@clerk/express": "^2.1.26",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "mongoose": "^9.7.0"
   },
   "scripts": {
-    "dev": "bun --watch server.js",
-    "start": "bun server.js"
+    "dev": "bun --watch src/server.js",
+    "start": "bun src/server.js"
   }
 }
