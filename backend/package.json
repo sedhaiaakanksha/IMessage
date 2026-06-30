@@ -18,6 +18,7 @@
     "mongoose": "^9.7.0"
   },
   "scripts": {
+    "build": "rm -rf dist && cp -R src dist",
     "dev": "bun --watch src/server.js",
     "start": "bun src/server.js"
   }
