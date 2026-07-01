@@ -1,7 +1,7 @@
 import express from "express";
 import User from "../models/User";
 import { verifyWebhook } from "@clerk/backend/webhooks";
-import User from "../../dist/models/User";
+// import User from "../../dist/models/User";
 
 const router = express.Router();
 
