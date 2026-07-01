@@ -3,6 +3,7 @@ import "dotenv/config.js";
 import cors from "cors";
 import fs from "fs";
 import path from "path";
+import job from "./lib/cron";
 
 import { clerkMiddleware } from "@clerk/express";
 import User from "./models/User";
