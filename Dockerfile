@@ -100,4 +100,4 @@ COPY --from=frontend-build /app/frontend/dist ./public
 
 EXPOSE 3001
 
-CMD ["bun", "run", "dist/serverjs"]
+CMD ["bun", "run", "dist/server.js"]
