@@ -27,15 +27,15 @@ router.post("/", async (req, res) => {
 
     const evt = await verifyWebhook(request, { signingSecret });
 
-    if (evt.type === "iser.created" || evt.type === "user.updsted") {
+    if (evt.type === "user.created" || evt.type === "user.updsted") {
       const u = evt.data;
 
       const email =
-        u.email_addresses?.find((e) => e.id === u.primary_email_adress_id)
+        u.email_addresses?.find((e) => e.id === u.primary_email_address_id)
           ?.email_address ?? u.email_addresses?.[0]?.email_address;
 
       const fullName =
-        [u.first_name, u.last_name].filter(Boolean).join("") ||
+        [u.first_name, u.last_name].filter(Boolean).join(" ") ||
         u.username ||
         email?.split("@")[0];
 
