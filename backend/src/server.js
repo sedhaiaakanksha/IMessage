@@ -24,7 +24,7 @@ app.use(
 );
 
 app.use(express.json());
-app.use(cors({ origin: FRONTEND_URL, credientials: true }));
+app.use(cors({ origin: FRONTEND_URL, credentials: true }));
 app.use(clerkMiddleware());
 
 app.get("/health", (req, res) => {

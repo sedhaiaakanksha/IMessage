@@ -20,7 +20,7 @@ router.post("/", async (req, res) => {
     const request = new Request("http://internal/webhooks/clerk", {
       method: "POST",
       headers: new Headers(req.headers),
-      body: playload,
+      body: payload,
     });
 
     //throws if the signature is wrong or the body was tampered wth : only then do we trust evt
