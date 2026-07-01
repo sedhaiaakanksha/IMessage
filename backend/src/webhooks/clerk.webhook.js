@@ -25,7 +25,7 @@ router.post("/", async (req, res) => {
 
     //throws if the signature is wrong or the body was tampered wth : only then do we trust evt
 
-    const evt = await verifyWebhoo(request, { signingSecret });
+    const evt = await verifyWebhook(request, { signingSecret });
 
     if (evt.type === "iser.created" || evt.type === "user.updsted") {
       const u = evt.data;
