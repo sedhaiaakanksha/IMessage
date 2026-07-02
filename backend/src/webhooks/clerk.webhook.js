@@ -34,6 +34,8 @@ router.post("/", async (req, res) => {
         u.username ||
         email?.split("@")[0];
 
+      console.log("About to update database");
+
       await User.findOneAndUpdate(
         { clerkId: u.id },
         {
